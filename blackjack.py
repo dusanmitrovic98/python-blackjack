@@ -57,3 +57,4 @@ class Game:
         self.player_hand = Hand()
         self.dealer_hand = Hand()
         self.money = starting_money
+        self.bet = 0
