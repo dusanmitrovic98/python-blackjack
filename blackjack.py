@@ -60,3 +60,4 @@ class Game:
         self.bet = 0
 
     def start(self):
+        self.deck.shuffle()
