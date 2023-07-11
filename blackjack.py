@@ -72,3 +72,4 @@ class Game:
         print("Money:", self.money)
         while True:
             try:
+                bet = int(input("Place your bet: "))
