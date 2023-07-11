@@ -91,3 +91,4 @@ class Game:
             self.dealer_hand.adjust_for_ace()
 
     def get_score(self):
+        return self.player_hand.value, self.dealer_hand.value
