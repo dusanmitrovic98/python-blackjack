@@ -92,3 +92,4 @@ class Game:
 
     def get_score(self):
         return self.player_hand.value, self.dealer_hand.value
+
