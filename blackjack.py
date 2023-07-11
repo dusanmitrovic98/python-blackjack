@@ -78,3 +78,4 @@ class Game:
                     break
                 else:
                     print("Invalid bet amount. Please try again.")
+            except ValueError:
