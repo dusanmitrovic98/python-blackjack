@@ -39,3 +39,4 @@ class Hand:
         self.value = 0
         self.aces = 0
 
+    def add_card(self, card):
