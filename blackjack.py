@@ -85,3 +85,4 @@ class Game:
         self.player_hand.add_card(self.deck.deal_card())
         self.player_hand.adjust_for_ace()
 
+    def dealer_play(self):
