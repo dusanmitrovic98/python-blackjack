@@ -77,3 +77,4 @@ class Game:
                     self.bet = bet
                     break
                 else:
+                    print("Invalid bet amount. Please try again.")
