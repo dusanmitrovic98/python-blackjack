@@ -56,3 +56,4 @@ class Game:
         self.deck = Deck()
         self.player_hand = Hand()
         self.dealer_hand = Hand()
+        self.money = starting_money
