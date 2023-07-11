@@ -44,3 +44,4 @@ class Hand:
         self.value += VALUES[card.rank]
         if card.rank == "A":
             self.aces += 1
+
