@@ -64,3 +64,4 @@ class Game:
         self.player_hand = Hand()
         self.dealer_hand = Hand()
         self.player_hand.add_card(self.deck.deal_card())
+        self.dealer_hand.add_card(self.deck.deal_card())
