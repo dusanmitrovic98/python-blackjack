@@ -88,3 +88,4 @@ class Game:
     def dealer_play(self):
         while self.dealer_hand.value < 17:
             self.dealer_hand.add_card(self.deck.deal_card())
+            self.dealer_hand.adjust_for_ace()
