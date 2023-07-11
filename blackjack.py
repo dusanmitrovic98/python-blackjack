@@ -76,3 +76,4 @@ class Game:
                 if 1 <= bet <= self.money:
                     self.bet = bet
                     break
+                else:
