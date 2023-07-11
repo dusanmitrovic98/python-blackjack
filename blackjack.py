@@ -38,3 +38,4 @@ class Hand:
         self.cards = []
         self.value = 0
         self.aces = 0
+
