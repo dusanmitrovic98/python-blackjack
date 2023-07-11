@@ -95,3 +95,4 @@ class Game:
 
     def is_player_bust(self):
         return self.player_hand.value > 21
+
