@@ -47,3 +47,4 @@ class Hand:
 
     def adjust_for_ace(self):
         while self.value > 21 and self.aces:
+            self.value -= 10
