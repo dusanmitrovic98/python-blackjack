@@ -62,3 +62,4 @@ class Game:
     def start(self):
         self.deck.shuffle()
         self.player_hand = Hand()
+        self.dealer_hand = Hand()
