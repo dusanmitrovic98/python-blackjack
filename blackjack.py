@@ -41,3 +41,4 @@ class Hand:
 
     def add_card(self, card):
         self.cards.append(card)
+        self.value += VALUES[card.rank]
