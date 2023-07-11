@@ -27,3 +27,4 @@ class Deck:
                 self.cards.append(Card(suit, rank))
 
     def shuffle(self):
+        random.shuffle(self.cards)
