@@ -94,3 +94,4 @@ class Game:
         return self.player_hand.value, self.dealer_hand.value
 
     def is_player_bust(self):
+        return self.player_hand.value > 21
