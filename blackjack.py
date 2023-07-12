@@ -30,3 +30,4 @@ class Deck:
         random.shuffle(self.cards)
 
     def deal_card(self):
+        return self.cards.pop()
