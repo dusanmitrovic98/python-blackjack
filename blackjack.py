@@ -43,3 +43,4 @@ class Hand:
         self.cards.append(card)
         self.value += VALUES[card.rank]
         if card.rank == "A":
+            self.aces += 1
