@@ -70,3 +70,4 @@ class Game:
 
     def place_bet(self):
         print("Money:", self.money)
+        while True:
