@@ -90,3 +90,4 @@ class Game:
             self.dealer_hand.add_card(self.deck.deal_card())
             self.dealer_hand.adjust_for_ace()
 
+    def get_score(self):
