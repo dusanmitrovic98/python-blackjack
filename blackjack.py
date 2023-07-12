@@ -59,3 +59,4 @@ class Game:
         self.money = starting_money
         self.bet = 0
 
+    def start(self):
