@@ -73,3 +73,4 @@ class Game:
         while True:
             try:
                 bet = int(input("Place your bet: "))
+                if 1 <= bet <= self.money:
