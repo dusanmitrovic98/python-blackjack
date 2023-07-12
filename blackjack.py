@@ -68,3 +68,4 @@ class Game:
         self.player_hand.add_card(self.deck.deal_card())
         self.dealer_hand.add_card(self.deck.deal_card())
 
+    def place_bet(self):
