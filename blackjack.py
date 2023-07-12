@@ -81,3 +81,4 @@ class Game:
             except ValueError:
                 print("Invalid input. Please enter a valid bet.")
 
+    def hit(self):
