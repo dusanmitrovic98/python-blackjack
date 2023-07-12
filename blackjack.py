@@ -86,3 +86,4 @@ class Game:
         self.player_hand.adjust_for_ace()
 
     def dealer_play(self):
+        while self.dealer_hand.value < 17:
