@@ -82,3 +82,4 @@ class Game:
                 print("Invalid input. Please enter a valid bet.")
 
     def hit(self):
+        self.player_hand.add_card(self.deck.deal_card())
