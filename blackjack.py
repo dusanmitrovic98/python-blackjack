@@ -53,3 +53,4 @@ class Hand:
 
 class Game:
     def __init__(self, starting_money):
+        self.deck = Deck()
