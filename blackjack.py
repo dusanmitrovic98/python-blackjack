@@ -25,3 +25,4 @@ class Deck:
         for suit in SUITS:
             for rank in RANKS:
                 self.cards.append(Card(suit, rank))
+
