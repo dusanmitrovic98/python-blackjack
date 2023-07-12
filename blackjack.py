@@ -23,3 +23,4 @@ class Deck:
     def __init__(self):
         self.cards = []
         for suit in SUITS:
+            for rank in RANKS:
