@@ -19,3 +19,4 @@ class Card:
         return f"{self.rank}{self.suit}"
 
 
+class Deck:
