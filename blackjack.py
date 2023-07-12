@@ -45,3 +45,4 @@ class Hand:
         if card.rank == "A":
             self.aces += 1
 
+    def adjust_for_ace(self):
