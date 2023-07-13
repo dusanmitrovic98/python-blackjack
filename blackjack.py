@@ -93,3 +93,83 @@ class Game:
     def get_score(self):
         return self.player_hand.value, self.dealer_hand.value
 
+    def is_player_bust(self):
+        return self.player_hand.value > 21
+
+    def is_dealer_bust(self):
+        return self.dealer_hand.value > 21
+
+    def is_player_win(self):
+        return self.player_hand.value > self.dealer_hand.value
+
+    def is_dealer_win(self):
+        return self.dealer_hand.value > self.player_hand.value
+
+    def is_draw(self):
+        return self.player_hand.value == self.dealer_hand.value
+
+    def display_hand(self, hide_dealer_card=False):
+        print("===== Blackjack =====")
+        print("Player's hand:", ', '.join(str(card) for card in self.player_hand.cards))
+        print("Dealer's hand:", end=' ')
+        if hide_dealer_card:
+            print(str(self.dealer_hand.cards[0]), "<hidden card>")
+        else:
+            print(', '.join(str(card) for card in self.dealer_hand.cards))
+        print("Player's score:", self.player_hand.value)
+        print("Dealers's score:", self.dealer_hand.value)
+        print("Money:", self.money)
+        print("=====================")
+
+
+# Initialize and start the game
+starting_money = 100
+game = Game(starting_money)
+
+while game.money > 0:
+    game.start()
+    game.place_bet()
+
+    while True:
+        game.display_hand(hide_dealer_card=True)
+
+        game.display_hand()
+
+        if game.is_player_bust():
+            game.money -= game.bet
+            print("You busted! Dealer wins.")
+            break
+
+        action = input("Do you want to hit (h), stand (s), or quit (q)? ").lower()
+
+        if action == "h":
+            game.hit()
+        elif action == "s":
+            game.dealer_play()
+
+            game.display_hand()
+
+            if game.is_dealer_bust():
+                game.money += game.bet
+                print("Dealer busted! You win.")
+            elif game.is_player_win():
+                game.money += game.bet
+                print("You win!")
+            elif game.is_dealer_win():
+                print("Dealer wins.")
+                game.money -= game.bet
+            else:
+                print("It's a draw.")
+
+            break
+        elif action == "q":
+            break
+        else:
+            print("Invalid input. Please try again.")
+
+    if action == "q":
+        break
+
+    print()
+
+print("Game over. Thank you for playing!")
